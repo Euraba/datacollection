@@ -8,8 +8,9 @@ Clone this repository and install in editable mode:
 
 ```bash
 git clone <repository-url> datacollection
-cd datacollection
-pip install -e .
+mkdir my_project && cd my_project
+pip install -e ../datacollection
+touch main.py && echo 'from polymarket.data_collection import DataCollection' >> main.py
 ```
 
 That's it! All dependencies will be installed automatically. The package uses automatic caching to speed up subsequent requests.
@@ -41,7 +42,7 @@ prices = DataCollection.price_history(
 - **Resilient pagination**: Handles API inconsistencies and resumes from interruptions
 - **Smart field extraction**: Fuzzy matching handles inconsistent API field names
 - **Multiple price modes**: Simple intervals or complex timestamp ranges with chunking
-- **High-frequency trading data**: Sub-minute resolution support
+- **High-frequency trading data**: Sub-minute resolution support(not yet done)
 
 ---
 
@@ -154,7 +155,7 @@ prices = DataCollection.price_history(
 )
 ```
 
-### High-Frequency Trading Data (Sub-Minute)
+### High-Frequency Trading Data (Sub-Minute) (Not yet implemented, must use onchain data)
 
 ```python
 # Fetch 10-second resolution price data
