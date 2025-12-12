@@ -7,7 +7,7 @@ A Python toolkit for fetching Polymarket data (closed markets/events and price h
 Clone this repository and install in editable mode:
 
 ```bash
-git clone <repository-url> datacollection
+git clone https://github.com/Euraba/datacollection datacollection
 mkdir my_project && cd my_project
 pip install -e ../datacollection
 touch main.py && echo 'from polymarket.data_collection import DataCollection' >> main.py
